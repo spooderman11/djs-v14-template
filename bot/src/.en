@@ -1,0 +1,5 @@
+TOKEN=your_bot_token_here
+CLIENT_ID=your_client_id_here
+GUILD_ID=your_guild_id_here
+MONGODB_URI=your_mongodb_uri_here
+OWNERS_IDS=owner_id_1, owner_id_2
