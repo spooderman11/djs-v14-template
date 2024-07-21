@@ -1,4 +1,24 @@
-To get started with this bot, follow these steps:
+# Discord.js v14 Bot Template
+
+This is a template for creating a Discord bot using the discord.js library in version 14. It includes a basic command handler, event handler, and database connection using MongoDB. The template is designed to be easy to set up and use, with a simple structure that can be easily expanded upon.
+
+## Features
+- **Command Handler**: Easily create and manage commands using the command handler.
+- **Event Handler**: Handle Discord events with the event handler.
+- **Database Connection**: Connect to a MongoDB database using Mongoose.
+- **Environment Variables**: Store sensitive information in a `.env` file.
+- **Owner Only Commands**: Restrict certain commands to bot owners only.
+
+## Requirements
+- **Node.js**: Make sure you have Node.js installed on your machine.
+- **MongoDB**: Set up a MongoDB database and get the connection URI.
+- **Yarn (optional)**: If you prefer to use Yarn, make sure you have it installed.
+
+## Additional Notes
+- Global deployment is going to be added in the future, this will be a boolean value in the `.env` file.
+- The bot can be modified to deploy to multiple servers, this will also be added in the future.
+
+## Getting Started
 
 1. **Clone the Repository**: Use Git to clone this repository to your local machine:
    git clone https://github.com/spooderman11/djs-v14-template.git your-repo-name
