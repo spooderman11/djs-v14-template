@@ -1,7 +1,7 @@
 /**
- * This is the main entry point for the Discord bot application. It sets up the Discord client, loads command and event handlers, connects to the MongoDB database, and ensures the bot configuration is present in the database. Finally, it logs the bot into the Discord API.
+ * The main entry point for the Discord bot application.
+ * This file sets up the Discord client, loads command and event handlers, connects to MongoDB, and logs the bot into Discord.
  */
-
 // flushing console, for better readbility if nodemon is used
 console.clear();
 
@@ -10,7 +10,6 @@ const { Client, GatewayIntentBits, Collection } = require("discord.js");
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
-const botconfig = require("./models/botconfig");
 const { print } = require("./utils/printer");
 
 const client = new Client({
@@ -35,11 +34,11 @@ mongoose
   .then(() => print("Connected to MongoDB"))
   .catch((err) => print(`Error connecting to MongoDB: ${err}`));
 
-// make sure the bot config is in the database
-botconfig.findOne({}).then((result) => {
-  if (!result) {
-    new botconfig().save();
-  }
-});
+// this line was a bot config check, removed since it's a template. If needed, uncomment and replace with your own check
+// botconfig.findOne({}).then((result) => {
+//   if (!result) {
+//     new botconfig().save();
+//   }
+// });
 
 client.login(process.env.TOKEN);
